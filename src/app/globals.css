@@ -1,26 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Caprasimo&family=Gabriela&family=Quicksand:wght@300..700&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Custom colors */
+  --color-brown: #392b22;
+  --color-brown-50: #f5f2ef;
+  --color-brown-100: #ece4df;
+  --color-brown-200: #d9c9bf;
+  --color-brown-300: #c6ae9f;
+  --color-brown-400: #b39380;
+  --color-brown-500: #9f7860;
+  --color-brown-600: #80604d;
+  --color-brown-700: #604839;
+  --color-brown-800: #403026;
+  --color-brown-900: #201813;
+  --color-brown-950: #100c0a;
+
+  --color-cream: #ffccad;
+  --color-cream-50: #ffefe5;
+  --color-cream-100: #ffe0cc;
+  --color-cream-200: #ffc099;
+  --color-cream-300: #ffa166;
+  --color-cream-400: #ff8133;
+  --color-cream-500: #ff6200;
+  --color-cream-600: #cc4e00;
+  --color-cream-700: #993b00;
+  --color-cream-800: #662700;
+  --color-cream-900: #331400;
+  --color-cream-950: #1a0a00;
+
+  --color-hot: #ff7a14;
+  --color-hot-50: #fff1e5;
+  --color-hot-100: #ffe2cc;
+  --color-hot-200: #ffc599;
+  --color-hot-300: #ffa866;
+  --color-hot-400: #ff8b33;
+  --color-hot-500: #ff6e00;
+  --color-hot-600: #cc5800;
+  --color-hot-700: #994200;
+  --color-hot-800: #662c00;
+  --color-hot-900: #331600;
+  --color-hot-950: #1a0b00;
+
+  --color-sunny: #ffb300;
+  --color-sunny-50: #fff7e5;
+  --color-sunny-100: #fff0cc;
+  --color-sunny-200: #ffe099;
+  --color-sunny-300: #ffd166;
+  --color-sunny-400: #ffc233;
+  --color-sunny-500: #ffb300;
+  --color-sunny-600: #cc8f00;
+  --color-sunny-700: #996b00;
+  --color-sunny-800: #664700;
+  --color-sunny-900: #332400;
+  --color-sunny-950: #1a1200;
+
+  --color-brightpink: #f44963;
+  --color-brightpink-50: #fee7ea;
+  --color-brightpink-100: #fccfd6;
+  --color-brightpink-200: #f99fac;
+  --color-brightpink-300: #f76e83;
+  --color-brightpink-400: #f43e59;
+  --color-brightpink-500: #f10e30;
+  --color-brightpink-600: #c10b26;
+  --color-brightpink-700: #91081d;
+  --color-brightpink-800: #600613;
+  --color-brightpink-900: #30030a;
+  --color-brightpink-950: #180105;
+
+  /* Custom typography */
+  --font-gabriela: Gabriela, serif;
+  --font-caprismo: Caprismo, serif;
+  --font-quicksand: Quicksand, sans-serif;
+  --font-arvo: Arvo, serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.wrapper {
+  @apply container mx-auto px-4;
 }
