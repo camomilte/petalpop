@@ -1,10 +1,8 @@
 // Import styling
-import "./globals.css";
+import "../globals.css";
 import { Gabriela, Caprasimo, Quicksand, Arvo } from 'next/font/google';
 
 // Import components
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 
 // Create 
 export const metadata = {
@@ -39,9 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`bg-cream ${gabriela.variable} ${caprasimo.variable} ${quicksand.variable} ${arvo.variable}`}>
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

@@ -3,7 +3,7 @@ import React from 'react'
 function ForgotPasswordPage() {
   return (
     <div>
-    ForgotPasswordPage
+    <h1>forgot password</h1>
     </div>
   )
 }
