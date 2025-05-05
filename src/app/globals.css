@@ -69,10 +69,7 @@
   --color-brightpink-950: #180105;
 
   /* Custom typography */
-  --font-gabriela: Gabriela, serif;
-  --font-caprismo: Caprismo, serif;
-  --font-quicksand: Quicksand, sans-serif;
-  --font-arvo: Arvo, serif;
+  --font-gabriela: var(--font-gabriela);
 }
 
 .wrapper {
