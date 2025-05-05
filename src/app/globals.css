@@ -70,6 +70,9 @@
 
   /* Custom typography */
   --font-gabriela: var(--font-gabriela);
+  --font-caprasimo: var(--font-caprasimo);
+  --font-quicksand: var(--font-quicksand);
+  --font-arvo: var(--font-arvo);
 }
 
 .wrapper {
