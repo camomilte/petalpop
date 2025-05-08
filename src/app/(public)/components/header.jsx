@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import React from 'react';
 
-import logo from '../../public/petalpop-logo-color.svg'
+import logo from '../../../../public/petalpop-logo-color.svg'
 
 const Header = () => {
   return (

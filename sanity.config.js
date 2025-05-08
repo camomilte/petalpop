@@ -12,6 +12,10 @@ import {structureTool} from 'sanity/structure'
 import {apiVersion, dataset, projectId} from './src/sanity/env'
 import {schema} from './src/sanity/schemaTypes'
 import {structure} from './src/sanity/structure'
+import { googleMapsInput } from '@sanity/google-maps-input'
+
+// Retrieve api key from enviroment variables
+const MAPS_KEY = process.env.NEXT_PUBLIC_MAPS_KEY;
 
 export default defineConfig({
   basePath: '/studio',
@@ -21,6 +25,7 @@ export default defineConfig({
   schema,
   plugins: [
     structureTool({structure}),
+    googleMapsInput({ apiKey: MAPS_KEY }),
     // Vision is for querying with GROQ from inside the Studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),
