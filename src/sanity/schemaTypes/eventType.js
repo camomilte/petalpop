@@ -17,7 +17,7 @@ export const eventType = defineType({
             name: "slug",
             type: "slug",
             options: {
-                source: "name"
+                source: "title"
             }
         }),
         // Description
@@ -31,6 +31,12 @@ export const eventType = defineType({
             title: "Time and Date",
             type: "datetime",
         }),
+        // Location
+        defineField({
+            name: "location",
+            type: "geopoint"
+        }),
+        // Images
         defineField({
             name: "image",
             type: "image",
@@ -43,12 +49,10 @@ export const eventType = defineType({
                 })
             ]
         }),
-        defineField({
-            name: "location",
-            type: "geopoint"
-        }),
+        // Ticketprice
         defineField({
             name: "price",
+            title: "Ticket price",
             type: "number"
         })
     ]
