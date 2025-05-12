@@ -42,11 +42,11 @@ const Navbar = () => {
                     </Link>
                 </ul> 
                 <div onClick={handleMenu} className='md:hidden me-5'>
-                    <IoMenu className='text-cream text-4xl'/>
+                    <IoMenu className='text-cream text-4xl cursor-pointer'/>
                 </div>
                 <div className={
                     isOpen
-                    ? 'fixed right-0 top-0 w-[60%] sm:hidden h-screen bg-brightpink p-10 text-cream duration-500'
+                    ? 'fixed right-0 top-0 w-[60%] sm:hidden h-screen bg-brightpink p-6 text-cream duration-500'
                     : 'fixed right-[-100%] top-0 h-screen p-10 duration-200'
                 }>
                     <div className='flex w-full justify-end'>

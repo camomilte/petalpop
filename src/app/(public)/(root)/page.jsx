@@ -1,7 +1,10 @@
+import Hero from "../components/sections/hero"
+
 const HomePage = () => {
   return (
-    <div>
-      <h1 className="text-4xl h-screen flex items-center justify-center">Home Page</h1>
+    <div className="h-screen">
+      <Hero />
+      <h1 className="text-4xl flex items-center justify-center">Home Page</h1>
     </div>
   )
 }
