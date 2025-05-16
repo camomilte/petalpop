@@ -73,8 +73,18 @@
   --font-caprasimo: var(--font-caprasimo);
   --font-quicksand: var(--font-quicksand);
   --font-arvo: var(--font-arvo);
+
+  --font-outline-2:
 }
 
 .wrapper {
   @apply container mx-auto px-4;
+}
+
+.button {
+  @apply rounded-4xl px-6 py-3 text-lg font-caprasimo border-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brown/80;
+}
+
+.button-pink {
+  @apply bg-brightpink-200 text-brightpink border-3 border-brightpink hover:bg-hot-300;
 }

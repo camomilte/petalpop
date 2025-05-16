@@ -4,7 +4,7 @@ import { Gabriela, Caprasimo, Quicksand, Arvo } from 'next/font/google';
 
 // Import components
 import Footer from "@/app/(public)/components/footer";
-import Navbar from "@/app/(public)/components/Navbar";
+import Navbar from "@/app/(public)/components/navbar";
 
 // Metadata
 export const metadata = {
@@ -41,6 +41,13 @@ const arvo = Arvo ({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
       <body className={`bg-cream ${gabriela.variable} ${caprasimo.variable} ${quicksand.variable} ${arvo.variable}`}>
         <Navbar />
         {children}

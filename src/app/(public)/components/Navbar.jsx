@@ -31,39 +31,39 @@ const Navbar = () => {
                 </Link>
 
                 <ul className='hidden md:flex gap-8 me-5'>
-                    <Link href='/events'>
-                        <li className='text-2xl'>Events</li>
-                    </Link>
-                    <Link href='/about'>
-                        <li className='text-2xl'>About</li>
-                    </Link>
-                    <Link href='/contact'>
-                        <li className='text-2xl'>Contact</li>
-                    </Link>
+                    <li className='text-2xl'>
+                        <Link href='/events'>Events</Link>        
+                    </li>
+                    <li className='text-2xl'>
+                        <Link href='/about'>About</Link>
+                    </li>
+                    <li className='text-2xl'>
+                        <Link href='/contact'>Contact</Link>
+                    </li>
                 </ul> 
                 <div onClick={handleMenu} className='md:hidden me-5'>
-                    <IoMenu className='text-cream text-4xl cursor-pointer'/>
+                    <IoMenu aria-label="open menu" className='text-cream text-4xl cursor-pointer'/>
                 </div>
                 <div className={
                     isOpen
-                    ? 'fixed right-0 top-0 w-[60%] sm:hidden h-screen bg-brightpink p-6 text-cream duration-500'
+                    ? 'fixed right-0 top-0 w-[60%] md:hidden h-screen bg-brightpink p-6 text-cream duration-500'
                     : 'fixed right-[-100%] top-0 h-screen p-10 duration-200'
                 }>
                     <div className='flex w-full justify-end'>
                         <div onClick={handleMenu}>
-                            <IoClose onClick={handleMenu} className='text-4xl cursor-pointer'/>
+                            <IoClose aria-label="close menu" onClick={handleMenu} className='text-4xl cursor-pointer'/>
                         </div>
                      </div>
-                    <ul className='flex flex-col gap-6 py-10 items-start'>
-                        <Link href='/events'>
-                            <li onClick={() => setIsOpen(false)} className='text-2xl hover:underline'>Events</li>
-                        </Link>
-                        <Link href='/about'>
-                            <li onClick={() => setIsOpen(false)} className='text-2xl hover:underline'>About</li>
-                        </Link>
-                        <Link href='/contact'>
-                            <li onClick={() => setIsOpen(false)} className='text-2xl hover:underline'>Contact</li>
-                        </Link>
+                    <ul className='flex flex-col gap-6 py-10 ps-8 items-start'>
+                        <li onClick={() => setIsOpen(false)}>
+                            <Link href='/events' className='text-2xl hover:underline'>Events</Link>
+                        </li>
+                        <li onClick={() => setIsOpen(false)}>
+                            <Link href='/about' className='text-2xl hover:underline'>About</Link>
+                        </li>
+                        <li onClick={() => setIsOpen(false)}>
+                            <Link href='/contact' className='text-2xl hover:underline'>Contact</Link>
+                        </li>
                     </ul> 
 
                     
