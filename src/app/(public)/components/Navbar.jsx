@@ -8,6 +8,7 @@ import React, { useState } from 'react';
 // Import images
 import logo from '../../../../public/petalpop-logo-color.svg';
 import { IoClose, IoMenu } from "react-icons/io5";
+import { TbFlowerFilled } from "react-icons/tb";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -56,13 +57,13 @@ const Navbar = () => {
                      </div>
                     <ul className='flex flex-col gap-6 py-10 ps-8 items-start'>
                         <li onClick={() => setIsOpen(false)}>
-                            <Link href='/events' className='text-2xl hover:underline'>Events</Link>
+                            <Link href='/events' className='text-2xl hover:underline flex items-center gap-3'><TbFlowerFilled />Events</Link>
                         </li>
                         <li onClick={() => setIsOpen(false)}>
-                            <Link href='/about' className='text-2xl hover:underline'>About</Link>
+                            <Link href='/about' className='text-2xl hover:underline flex items-center gap-3'><TbFlowerFilled />About</Link>
                         </li>
                         <li onClick={() => setIsOpen(false)}>
-                            <Link href='/contact' className='text-2xl hover:underline'>Contact</Link>
+                            <Link href='/contact' className='text-2xl hover:underline flex items-center gap-3'><TbFlowerFilled />Contact</Link>
                         </li>
                     </ul> 
 

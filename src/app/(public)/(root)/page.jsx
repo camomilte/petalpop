@@ -1,10 +1,14 @@
+import { Events } from "../components/sections/events"
 import Hero from "../components/sections/hero"
 
 const HomePage = () => {
+
+  const title = "Upcoming events - :)"
+
   return (
-    <div className="h-screen">
+    <div className="wrapper">
       <Hero />
-      <h1 className="text-4xl flex items-center justify-center">Home Page</h1>
+      <Events title={title}/>
     </div>
   )
 }
