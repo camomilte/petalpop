@@ -3,7 +3,7 @@ import Hero from "../components/sections/hero"
 
 const HomePage = () => {
 
-  const title = "Upcoming events - :)"
+  const title = "Upcoming events"
 
   return (
     <div className="wrapper">

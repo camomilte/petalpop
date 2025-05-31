@@ -1,4 +1,5 @@
 import { client } from '@/sanity/lib/client';
+import { getEvents } from '@/sanity/lib/fetch-data';
 import { GET_EVENTS_QUERY } from '@/sanity/lib/query';
 import { format, parseISO } from 'date-fns';
 import Image from 'next/image';
@@ -7,7 +8,7 @@ import React from 'react';
 
 export const Events = async ({ title }) => {
 
-  const events = await client.fetch(GET_EVENTS_QUERY)
+  const events = await getEvents();
 
   return (
     <section className='font-quicksand'>
