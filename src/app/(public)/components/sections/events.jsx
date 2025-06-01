@@ -1,6 +1,4 @@
-import { client } from '@/sanity/lib/client';
 import { getEvents } from '@/sanity/lib/fetch-data';
-import { GET_EVENTS_QUERY } from '@/sanity/lib/query';
 import { format, parseISO } from 'date-fns';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -21,7 +19,7 @@ export const Events = async ({ title }) => {
           
               return (
               
-              <Link key={event._id} href={`/events/${event.slug}`} className='border-2 border-brown p-5 rounded-xl overflow-hidden flex flex-col justify-between'>
+              <Link key={event._id} href={`/events/${event.slug}`} className='bg-hot-300 p-5 rounded-xl overflow-hidden flex flex-col justify-between'>
                 <div className='flex flex-col gap-2'>
                   <Image 
                     src={event.image.url} 

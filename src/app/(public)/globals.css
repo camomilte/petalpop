@@ -75,7 +75,8 @@
   --font-quicksand: var(--font-quicksand);
   --font-lato: var(--font-lato);
 
-  --font-outline-2:
+  --tw-prose-bullets: #ffff;
+
 }
 
 .wrapper {

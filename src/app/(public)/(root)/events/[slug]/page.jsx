@@ -25,27 +25,36 @@ async function EventDetailPage ({ params }) {
 
 
   return (
-    <div className="wrapper">
-      <h1>{event.title}</h1>
-      <Image 
-        src={event.image.url} 
-        alt={event.image.alt} 
-        width={300} 
-        height={200}
-        className='w-full h-full object-cover rounded-xl aspect-3/2'
-      />
-      <h2 className="text-2xl">Date:</h2>
-      <p>{formattedDate}</p>
-      <h2 className="text-2xl">Location:</h2>
-      <div>
-        <LocationMap lat={event.location.lat} lng={event.location.lng} />
+    <div className="wrapper font-quicksand">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-5xl text-center my-8 font-caprasimo text-brightpink">{event.title}</h1>
+        <Image 
+          src={event.image.url} 
+          alt={event.image.alt} 
+          width={300} 
+          height={200}
+          className='w-full h-full object-cover rounded-xl aspect-4/2'
+        />
+        <div className="flex gap-5 my-5">
+          <h2 className="text-xl font-gabriela">Date:</h2>
+          <p>{formattedDate}</p>
+        </div>
+        <div className="my-5 flex gap-5 border-t pt-5">
+          <h2 className="text-xl font-gabriela">Price:</h2>
+          <p>{event.price} SEK</p>
+        </div>
+        
+        <div className="prose text-brown !max-w-none prose-ul:marker:text-brown my-5 bg-brightpink/20 p-5 rounded-md">
+          <PortableText value={event.description} />
+        </div>
+        <br />
+      
+        <h2 className="text-xl font-gabriela">Location:</h2>
+        <div className="my-5">
+          <LocationMap lat={event.location.lat} lng={event.location.lng} />
+        </div>
+
       </div>
-      <div className="prose text-brown">
-        <PortableText value={event.description} />
-      </div>
-      <br />
-      <h2 className="text-2xl">Price:</h2>
-      <p>{event.price} SEK</p>
 
 
     </div>
